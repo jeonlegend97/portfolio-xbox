@@ -1,0 +1,460 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>xbox</title>
+        <link href="css/index.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700&display=swap&subset=korean" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            /*$(document).ready(function() {
+                var itemli = $('#menu > li');
+
+                itemli.click(function () {
+                    $("#menu2").stop().fadeOut(1);
+
+                    if ( $(window).width() > 1024) {
+                        $(this).find("ul > li").stop().fadeIn(100);
+                        itemli.not($(this)).siblings('li > ul > li ').stop().fadeOut(100);
+                    }
+                });
+            });
+
+            $(document).ready(function() {
+                $(".menu2_title").click(function() {
+                    $("#menu > li > ul > li").stop().fadeOut(1);
+
+                    if ( $(window).width() > 1024) {
+                        $("#menu2").stop().fadeToggle(300);
+                    }
+                });
+            });*/
+            $(document).ready(function(){
+                $("#main_img, #contents, #footer, #logo").click(function() {
+                    $(".itemli>ul>li").fadeOut(100);
+                })
+
+                var itemli =$(".itemli")
+
+                itemli.click(function () {
+                    if ( $(window).width() > 1024) {
+                        $(this).find("ul > li").stop().fadeToggle(1);
+                        itemli.not($(this)).find("ul > li").stop().fadeOut(1);
+                        $("#menu2").stop().fadeOut(1);
+                    }
+                });
+            });
+
+            $(document).ready(function(){
+                $("#main_img, #contents, #footer, #logo").click(function() {
+                    $("#menu2").fadeOut(100);
+                })
+
+                $(".menu2_title").click(function () {
+                    if ( $(window).width() > 1024) {
+                        $(" #menu2").stop().fadeToggle(1);
+                        $("#menu > li > ul > li").stop().fadeOut(1);
+                    }
+                });
+            });
+        </script>
+
+    </head>
+
+    <body>
+        <header>
+            <div id="nav_wrap">
+                <div id="nav">
+                    <div id="menu_hidden"><img src="images/menu_hidden.png" alt=""></div>
+                    <ul id="logo">
+                        <li><a href="index_sub.html"><img src="images/microsoft.png" alt="" /></a></li>
+                        <li><a href="index.html"><img src="images/nav_xbox_logo.png" alt="" /></a></li>
+                    </ul>
+
+                    <ul id="menu">
+                        <li class="itemli"><a href="#">Game pass<img src="images/down_icon.png" alt="" /></a>
+                            <ul>
+                                <li><a href="#">개요</a></li>
+                                <li><a href="#">게임 살펴보기</a></li>
+                                <li><a href="#">Xbox Live Gold</a></li>
+                            </ul>
+                        </li>
+                        <li class="itemli"><a href="#">게임<img src="images/down_icon.png" alt="" /></a>
+                            <ul>
+                                <li><a href="#">게임 홈</a></li>
+                                <li><a href="#">콘솔 게임</a></li>
+                                <li><a href="#">PC게임</a></li>
+                                <li><a href="#">선불 코드 사용</a></li>
+                                <li><a href="#">세일 & 특가</a></li>
+                            </ul>
+                        </li>
+                        <li class="itemli"><a href="#">장치<img src="images/down_icon.png" alt="" /></a>
+                            <ul>
+                                <li><a href="#">Xbox Series X</a></li>
+                                <li><a href="#">Xbox One 본체</a></li>
+                                <li><a href="#">액세서리</a></li>
+                                <li><a href="#">구입처</a></li>
+                                <li><a href="#">상품</a></li>
+                            </ul>
+                        </li>
+                        <li class="itemli"><a href="#">커뮤니티<img src="images/down_icon.png" alt="" /></a>
+                            <ul>
+                                <li><a href="#">Xbox Live 골드</a></li>
+                                <li><a href="#">Mixer</a></li>
+                            </ul>
+                        </li>
+                        <li class="itemli"><a href="#">xbox 지원<img src="images/down_icon.png" alt="" /></a>
+                            <ul>
+                                <li><a href="#">지원 홈</a></li>
+                                <li><a href="#">Xbox Live 상태</a></li>
+                                <li><a href="#">도움말 항목</a></li>
+                                <li><a href="#">액세스 가능한 게임</a></li>
+                                <li><a href="#">지원의 새로운 사항</a></li>
+                            </ul>
+                        </li>
+                    </ul><!--#menu-->
+
+                    <p class="menu2_title"><a href="#">Mircrosoft 전체</a></p>
+                    
+                    <div id="menu2">
+                        <div id="menu_title">
+                            <ul>
+                                <li><a href="#">Office</a></li>
+                                <li><a href="#">Windows</a></li>
+                                <li><a href="#">Surface</a></li>
+                                <li><a href="#">Xbox</a></li>
+                                <li><a href="#">지원</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div id="menu_article">
+                            <ul>
+                                <li>소프트웨어
+                                    <ul>
+                                        <li><a href="#">Windows용 앱</a></li>
+                                        <li><a href="#">OneDrive</a></li>
+                                        <li><a href="#">Outlook</a></li>
+                                        <li><a href="#">Skype</a></li>
+                                        <li><a href="#">OneNote</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li>PC 및 장치
+                                    <ul>
+                                        <li><a href="#">PCs & tablets</a></li>
+                                        <li><a href="#">주변기기</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li>엔터테인먼트
+                                    <ul>
+                                        <li><a href="#">Xbox 및 게임</a></li>
+                                        <li><a href="#">게임</a></li>
+                                        <li><a href="#">Windows 게임</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li>기업 고객용
+                                    <ul>
+                                        <li><a href="#">Microsoft Azure</a></li>
+                                        <li><a href="#">Microsoft Dynamics 365</a></li>
+                                        <li><a href="#">Microsoft 365</a></li>
+                                        <li><a href="#">Microsoft Industry</a></li>
+                                        <li><a href="#">데이터 플랫폼</a></li>
+                                        <li><a href="#">볼륨 라이선싱</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li>Developer & IT
+                                    <ul>
+                                        <li><a href="#">.NET</a></li>
+                                        <li><a href="#">Visual Studio</a></li>
+                                        <li><a href="#">Windows Server</a></li>
+                                        <li><a href="#">Windows 앱 개발</a></li>
+                                        <li><a href="#">문서</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li>기타
+                                    <ul>
+                                        <li><a href="#">Microsoft Store</a></li>
+                                        <li><a href="#">무료 다운로드 및 보안</a></li>
+                                        <li><a href="#">교육</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!--#nav-->
+            </div><!--#nav_wrap-->
+
+            <div id="main_img">
+            	<div id="main_img_text_wrap">
+                    <div id="text_box">
+                        <div id="text_logo">
+                            <img src="images/division_logo.png" alt="" />
+                        </div><!--#text_logo-->
+
+                        <p class="text_title">
+                            당신의 임무는 남은 인류를 보호하고 희망을 찾는 것입니다.
+                        </p><!--text_title-->
+
+                        <p class="text_article">
+                            당신은 독자적으로 운영하는 기관인 디비전에서 훈련을 받은 무명의 전술 요원
+                             중 한 명입니다. 당신의 임무는 남은 인류를 보호하고 희망을 찾는 것입니다.
+                        </p><!--.text_article-->
+
+                        <div id="text_btn_box">
+                            <p class="text_btn">
+                                <a href="#">지금 구매하세요</a>
+                            </p>
+                        </div><!--#text_btn-->
+
+                        <ul id="support">
+                            <li>4K <br /><span>ULTRA HD</span></li>
+                            <li>HDR</li>
+                            <li>XBOX ONE X<br />에서 향상된</li>
+                        </ul>
+
+                        <img src="images/division_xbox.jpg" alt="" class="game_title" />
+                    </div><!--#text_box-->
+
+                    <div id="slide_box">
+                        <div id="slide_box_1"><a href="#"></a></div>
+                        <div id="slide_box_2"><a href="#"></a></div>
+                        <div id="slide_box_3"><a href="#"></a></div>
+                        <div id="slide_box_4"><a href="#"></a></div>
+                    </div><!-- #slide_box -->
+                </div><!-- #main_img_text_wrap -->
+            </div><!--#main_img-->
+        </header><!--header-->
+
+        <div id="contents">
+            <div id="gamepass"><!--게임패스-->
+            	<div id="gamepass_text_box_wrap">
+                    <img src="images/gamepass.png" alt="" />
+
+                    <p class="gamepass_text_title">
+                        다양한 고품질 콘솔 게임이 있는 심도있는 라이브러리에 빠져보세요.<br />
+                        새 게임에 참여하거나 최근 히트작을 따라 잡으세요. Xbox Game Pass를 사용하면 항상 새롭게 플레이할 게임이 있습니다.
+                    </p>
+
+                    <p class="gamepass_text_article">
+                        매달 저렴한 가격으로 만나보세요. 취소는 언제든지 가능합니다.
+                    </p>
+                </div><!--#gamepass_text_box_wrap-->
+
+                <div id="gamepass_contents">
+                	<div id="gamepass_menu">
+                    	<ul>
+                        	<li><a href="#">4K</a></li>
+                            <li><a href="#">HDR</a></li>
+                            <li><a href="#">멀티플레이</a></li>
+                            <li><a href="#">협동전투모드</a></li>
+                        </ul>
+                    </div><!--#gamepass_menu-->
+
+                    <div id="gamepass_game_box">
+                    	<div id="gamepass_game_1">
+                            <p class="gamepass_game_title">CALL OF DUTY</p>
+
+                            <div class="xbox_btn">
+                            	<a href="#"><img src="images/small_xbox.png" alt="" /></a>
+                            </div>
+                        </div><!--#gamepass_game_1-->
+
+                        <div id="gamepass_game_2">
+                            <p class="gamepass_game_title">FORZA HORIZON4</p>
+
+                            <div class="xbox_btn">
+                            	<a href="#"><img src="images/small_xbox.png" alt="" /></a>
+                            </div>
+                        </div><!--#gamepass_game_1-->
+
+                        <div id="gamepass_game_3">
+                            <p class="gamepass_game_title">HALO5: GUARDIANS</p>
+
+                            <div class="xbox_btn">
+                            	<a href="#"><img src="images/small_xbox.png" alt="" /></a>
+                            </div>
+                        </div><!--#gamepass_game_1-->
+
+                        <div id="gamepass_game_4">
+                            <p class="gamepass_game_title">STAR WARS JEDI™</p>
+
+                            <div class="xbox_btn">
+                            	<a href="#"><img src="images/small_xbox.png" alt="" /></a>
+                            </div>
+                        </div><!--#gamepass_game_1-->
+
+                        <div id="gamepass_game_5">
+                            <p class="gamepass_game_title">THE WITCHER3: WILD HUNT</p>
+
+                            <div class="xbox_btn">
+                            	<a href="#"><img src="images/small_xbox.png" alt="" /></a>
+                            </div>
+                        </div><!--#gamepass_game_1-->
+
+                        <div id="gamepass_game_6">
+                            <p class="gamepass_game_title">DESTINY 2</p>
+
+                            <div class="xbox_btn">
+                            	<a href="#"><img src="images/small_xbox.png" alt="" /></a>
+                            </div>
+                        </div><!--#gamepass_game_1-->
+                    </div><!--#gamepass_game_box-->
+                </div><!--#gamepass_contents-->
+            </div><!--#gamepass-->
+
+            <div id="introduce"><!--xbox one 게임-->
+            	<div id="introduce_menu">
+                	<p class="introduce_title">
+                    	Xbox One X 게임
+                </div><!--#introduce_menu-->
+
+                <div id="introduce_contents">
+                	<ul id="introduce_game">
+                    	<li><a href="#"><img src="images/grid1.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="images/grid2.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="images/grid3.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="images/grid4.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="images/grid5.jpg" alt="" /></a></li>
+                    </ul>
+                </div><!--#introduce_contents-->
+
+                <div id="introduce_game_480">
+                    <div id="nba480"></div>
+                    <div id="forza480"></div>
+                    <div id="star480"></div>
+                </div><!--#introduce_game_480-->
+            </div><!--#introduce-->
+
+            <div id="product"><!--제품-->
+            	<div id="product_text_box">
+                	<div id="p_logo">
+                    	<img src="images/xbox_one_x.png" alt="" />
+                    </div><!--#p_logo-->
+
+                    <p class="p_text_left">
+                    	"이것은 미래지향적 게임기다."
+                    </p><!--.p_text_left-->
+
+                    <p class="p_text_right">
+                    	- Economic Review
+                    </p><!--.p_text_right-->
+
+                    <div id="p_btn">
+                    	<a href="#">Xbox One X 구매하기</a>
+                    </div><!--#p_btn-->
+                </div><!--#product_text_box-->
+
+                <div id="xbox_one_black"><img src="images/xbox-one-s-png1.png" alt="" /></div>
+                <div id="xbox_one_white"><img src="images/xbox-one-s-png2.png" alt="" /></div>
+            </div><!--#product-->
+
+            <div id="livegold"><!--라이브골드-->
+            	<div id="livegold_box">
+                	<div id="live_title">
+                        <div id="live_logo">
+                            <img src="images/livegold.png" alt="" />
+                        </div><!--#live_logo-->
+
+                        <div id="live_article">
+                            매달 무료 게임이 제공됩니다. Gold 멤버십 혜택을 누려보세요.<br />
+                            1개월 동안 이전 버전과 호환되는 Xbox 360 게임을 포함한 최대 4개의 Xbox One용
+                            무료 게임을 받으세요
+                        </div><!--#live_article-->
+                    </div><!--#live_title-->
+
+                    <div id="live_icon_box">
+                    	<div id="live_icon_box1">
+                        	<img src="images/icon1.png" alt="" />
+
+                            <p class="icon_title">
+                            	가장 진보된 네트워크
+                            </p>
+
+                            <p class="icon_article">
+                            	네트워크상의 최고의 게이머 네트워크에 가입하세요.
+                            </p>
+                        </div><!--#icon_box1-->
+
+                        <div id="live_icon_box2">
+                        	<img src="images/icon2.png" alt="" />
+
+                            <p class="icon_title">
+                            	멀티플레이어 게이밍
+                            </p>
+
+                            <p class="icon_article">
+                            	Xbox One에서 경쟁적이며 협동하는 게이밍을 최고로 경험하세요.
+                            </p>
+                        </div><!--#icon_box2-->
+
+                        <div id="live_icon_box3">
+                        	<img src="images/icon3.png" alt="" />
+
+                            <p class="icon_title">
+                            	무료 게임
+                            </p>
+
+                            <p class="icon_article">
+                            	매달 2~4종의 무료 게임을 플레이하세요
+                            </p>
+                        </div><!--#icon_box3-->
+
+                        <div id="live_icon_box4">
+                        	<img src="images/icon4.png" alt="" />
+
+                            <p class="icon_title">
+                            	게임할인
+                            </p>
+
+                            <p class="icon_article">
+                            	상점에서 Xbox One 게임에 최대 50~75% 할인을 받으세요.
+                            </p>
+                        </div><!--#icon_box4-->
+                    </div><!--#live_icon_box-->
+                </div><!--#livegold_box-->
+            </div><!--#livegold-->
+        </div><!--#contents-->
+
+        <footer>
+        	<div id="footer_wrap">
+            	<div id="f_nav">
+                	<ul>
+                    	<li>XBOX</li>
+                        <li><a href="#">고객지원</a></li>
+                        <li><a href="#">광과민성 반응 경고</a></li>
+                        <li><a href="#">사용규정</a></li>
+                    </ul>
+                </div>
+
+                <ul id="f_logo">
+                	<li><img src="images/microsoft.png" alt="" /></li>
+                    <li><img src="images/footer_xbox.png" alt="" /></li>
+                </ul>
+
+                <ul id="f_logo_small">
+                	<li><img src="images/microsoft_small.png" alt="" /></li>
+                    <li><img src="images/footer_xbox_small.png" alt="" /></li>
+                </ul>
+
+                <ul id="f_lang">
+                	<li><img src="images/world.png" alt="" /></li>
+                    <li>한국어(대한민국)</li>
+                </ul>
+
+                <ul id="f_menu">
+                	<li><a href="#">Microsoft에 문의</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">사용약관</a></li>
+                    <li><a href="#">상표</a></li>
+                    <li><a href="#">광고정보</a></li>
+                    <li><a href="#">© Microsoft 2020</a></li>
+                </ul>
+            </div><!--#footer_wrap-->
+        </footer>
+    </body>
+</html>
